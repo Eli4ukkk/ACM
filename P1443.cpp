@@ -25,8 +25,7 @@ void BFS() {
 			    ny >= 0 && ny < m &&
 			    ans[nx][ny] == -1
 			) {
-				//cout<<"访问坐标:( "<<nx<<" , "<<ny<<" )"<<endl;
-				ans[nx][ny] = tmp.step;
+				ans[nx][ny] = tmp.step+1;
 				Node newNode = {nx, ny, tmp.step + 1};
 				q.push(newNode);
 			}
@@ -51,6 +50,4 @@ int main() {
 	}
 	return 0;
 }
-// x x x
-// x x x
-// x x x
+
